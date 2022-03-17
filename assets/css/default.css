@@ -3,14 +3,15 @@
 /*==============*/
 
 html {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	text-rendering: optimizeLegibility;
 	scroll-behavior: smooth;
+	--theme_col-dark:#090B0D;
+	--theme_col-light:#DCE9F3;
+	--theme_col-secondery-light:#41F2E0;
+	--theme_col-secondery-deep:#227364;
 }
 
 body {
-	background: #fff;
+	background: #eee;
 	font-family: sans-serif;
 	line-height: 1.8;
 	overflow-x: hidden;
@@ -47,10 +48,6 @@ textarea {
 	border: 0;
 }
 
-section {
-	padding: 5rem 0;
-}
-
 /*=======================*/
 /*-- RESPONSIVE IMG --*/
 /*=======================*/
@@ -64,26 +61,14 @@ section {
 /*=======================*/
 .circle {
 	border-radius: 50%;
-	-webkit-border-radius: 50%;
-	-moz-border-radius: 50%;
-	-ms-border-radius: 50%;
-	-o-border-radius: 50%;
 }
 
 .rounded-pill {
 	border-radius: 3rem;
-	-webkit-border-radius: 3rem;
-	-moz-border-radius: 3rem;
-	-ms-border-radius: 3rem;
-	-o-border-radius: 3rem;
 }
 
 .rounded {
 	border-radius: .4rem;
-	-webkit-border-radius: .4rem;
-	-moz-border-radius: .4rem;
-	-ms-border-radius: .4rem;
-	-o-border-radius: .4rem;
 }
 
 /*=======================*/
@@ -94,9 +79,14 @@ section {
 }
 
 .flex-between {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
+	-ms-flex-pack: justify;
 	justify-content: space-between;
+	-ms-flex-align: center;
 	align-items: center;
+	-ms-flex-wrap: wrap;
 	flex-wrap: wrap;
 }
 
@@ -117,32 +107,44 @@ section {
 .sec-title::before {
 	position: absolute;
 	font-size: 4rem;
-	color: #fff;
+	color: var(--theme_col-light);
 	top: -30%;
 	line-height: 1;
 	z-index: -1;
 	font-family: 'rs';
 	font-weight: 900;
 	left: 0%;
-	width:100%;
+	width: 100%;
 	text-shadow: 0 0 2px #00000090;
 	/* transform: translate(50%,50%); */
 }
 
 
 
-@keyframes moving-text {
+@-webkit-keyframes moving-text {
 	from {
-		right: -100%;
+		bottom: -100%;
 	}
 
 	to {
-		right: 100%;
+		bottom: 200%;
+	}
+}
+
+
+
+@keyframes moving-text {
+	from {
+		bottom: -100%;
+	}
+
+	to {
+		bottom: 200%;
 	}
 }
 
 /*=======================*/
-/*-- CONTAINTER --*/
+/*-- CONTAINER --*/
 /*=======================*/
 
 .container {
@@ -205,29 +207,5 @@ section {
 }
 
 /*=======================*/
-/*-- CONTAINTER --*/
+/*-- CONTAINER END --*/
 /*=======================*/
-
-#up_btn {
-	opacity: 0;
-	position: fixed;
-	bottom: 3rem;
-	right: 3rem;
-	z-index: 99999999999;
-	font-size: 1.8rem;
-	background: #580642;
-	color: #FFFFFF;
-	cursor: pointer;
-	width: 3.5rem;
-	height: 3.5rem;
-	line-height: 3.5rem;
-	box-shadow: 2px 0 5px #00000080;
-	transition: 0.3s ease;
-}
-
-#up_btn:hover {
-	-webkit-transform: translateY(-.7rem);
-	-ms-transform: translateY(-.7rem);
-	transform: translateY(-.2rem);
-	border-radius: 50%;
-}
