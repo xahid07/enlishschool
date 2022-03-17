@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'rb';
+    src: url("Raleway-Bold.ttf");
+}
+@font-face {
+    font-family: 'rbl';
+    src: url("Raleway-Black.ttf");
+}
+@font-face {
+    font-family: 'reb';
+    src: url("Raleway-ExtraBold.ttf");
+}
+@font-face {
+    font-family: 'rel';
+    src: url("Raleway-ExtraLight.ttf");
+}
+@font-face {
+    font-family: 'rl';
+    src: url("Raleway-Light.ttf");
+}
+@font-face {
+    font-family: 'rst';
+    src: url("RobotoSlab-Thin.ttf");
+} 
+ @font-face {
+    font-family: 'rsl';
+    src: url("RobotoSlab-Light.ttf");
+}
+@font-face {
+    font-family: 'rsm';
+    src: url("RobotoSlab-Medium.ttf");
+}
+
+@font-face {
+    font-family: 'rsr';
+    src: url("RobotoSlab-Regular.ttf");
+} 
+
+@font-face {
+    font-family: 'rs';
+    src: url("RobotoSlab-VariableFont_wght.ttf");
+}
+
